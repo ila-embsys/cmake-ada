@@ -45,7 +45,7 @@ execute_process(COMMAND ${CMAKE_ADA_COMPILER} "--version" RESULT_VARIABLE ADA_CO
 if( ${ADA_COMPILER_RTN} EQUAL "0" )
     message(WARNING "No version information available")
 else()
-    string(REGEX MATCH ".*(GNAT) ([0-9]+\\.[0-9]+(\\.[0-9]*)*).*" ADA_COMPILER_OUTPUT_MATCH ${ADA_COMPILER_OUTPUT})
+    string(REGEX MATCH ".*(GNAT) ([0-9]+\\.[0-9]+(\\.[0-9]*)*).*" ADA_COMPILER_OUTPUT_MATCH "${ADA_COMPILER_OUTPUT}")
     set(CMAKE_ADA_COMPILER_VERSION ${CMAKE_MATCH_2})
     set(CMAKE_ADA_COMPILER_ID "GNU")
 endif()
