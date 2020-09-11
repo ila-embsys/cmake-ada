@@ -20,7 +20,7 @@ include(CMakeDetermineCompiler)
 include(Platform/${CMAKE_SYSTEM_NAME}-ADA OPTIONAL)
 
 if( NOT CMAKE_ADA_COMPILER_NAMES )
-    set(CMAKE_ADA_COMPILER_NAMES gnat)
+    set(CMAKE_ADA_COMPILER_NAMES gcc)
 endif()
 
 if( NOT CMAKE_ADA_COMPILER )
