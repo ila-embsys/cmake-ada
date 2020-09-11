@@ -42,7 +42,7 @@ mark_as_advanced(CMAKE_ADA_COMPILER)
 
 execute_process(COMMAND ${CMAKE_ADA_COMPILER} "--version" RESULT_VARIABLE ADA_COMPILER_RTN OUTPUT_VARIABLE "${ADA_COMPILER_OUTPUT}")
 
-if( ${ADA_COMPILER_RTN} NOT EQUAL "0" )
+if(NOT (${ADA_COMPILER_RTN} EQUAL "0") )
     message(WARNING "No version information available")
 else()
     string(REGEX MATCH ".*(gcc) \\(.*\\) ([0-9]+\\.[0-9]+(\\.[0-9]*)*).*" ADA_COMPILER_OUTPUT_MATCH "${ADA_COMPILER_OUTPUT}")
