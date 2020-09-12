@@ -48,6 +48,7 @@ else()
     string(REGEX MATCH ".*(gcc) \\(.*\\) ([0-9]+\\.[0-9]+(\\.[0-9]*)*).*" ADA_COMPILER_OUTPUT_MATCH "${ADA_COMPILER_OUTPUT}")
     set(CMAKE_ADA_COMPILER_VERSION ${CMAKE_MATCH_2})
     set(CMAKE_ADA_COMPILER_ID "GNU")
+    set(CMAKE_ADA_COMPILER_ID_FLAGS_ALWAYS "-c")
 endif()
 
 
