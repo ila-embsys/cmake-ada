@@ -1,0 +1,8 @@
+
+-- CMAKE_ADA_COMPILER_ID should be expanded by CMake to @CMAKE_ADA_COMPILER_ID@
+
+procedure Hello is
+    info_compiler : string := "INFO" & ":" & "compiler[" & "@CMAKE_ADA_COMPILER_ID@" & "]";
+begin
+   null;
+end Hello;
