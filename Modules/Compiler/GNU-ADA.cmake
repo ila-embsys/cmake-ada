@@ -20,4 +20,4 @@ include(Compiler/GNU)
 
 __compiler_gnu(ADA)
 
-set(CMAKE_ADA_FLAGS_INIT "-gnato -gnatwa -gnatQ -gnat2005")
+set(CMAKE_ADA_FLAGS_INIT "-c")
