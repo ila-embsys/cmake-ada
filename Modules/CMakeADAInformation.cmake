@@ -31,7 +31,7 @@ endif()
 
 set(CMAKE_ADA_FLAGS_INIT "$ENV{ADAFLAGS} ${CMAKE_ADA_FLAGS_INIT}")
 
-set(CMAKE_ADA_FLAGS ${CMAKE_ADA_FLAGS_INIT} CACHE STRING "Flags used by the compiler during all build types.")
+cmake_initialize_per_config_variable(CMAKE_ADA_FLAGS "Flags used by the ADA compiler")
 
 if( NOT CMAKE_NOT_USING_CONFIG_FLAGS )
     if( NOT CMAKE_NO_BUILD_TYPE )
