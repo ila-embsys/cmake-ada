@@ -55,7 +55,7 @@ endif()
 if( NOT CMAKE_ADA_COMPILER_ID_RUN )
     set(CMAKE_ADA_COMPILER_ID_RUN 1)
     include(${CMAKE_ROOT}/Modules/CMakeDetermineCompilerId.cmake)
-    CMAKE_DETERMINE_COMPILER_ID(ADA ADAFLAGS CMakeCompilerId.adb)
+    CMAKE_DETERMINE_COMPILER_ID(ADA ADAFLAGS CMakeADACompilerId.adb)
 endif()
 
 
