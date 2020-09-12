@@ -21,6 +21,10 @@ if(UNIX)
 else()
     set(CMAKE_ADA_OUTPUT_EXTENSION .o)
 endif()
+# set replacing extension
+# otherwise compiler produce error
+# gnat1: incorrect object file name
+SET(CMAKE_ADA_OUTPUT_EXTENSION_REPLACE 1)
 
 set(CMAKE_ADA_SOURCE_FILE_EXTENSIONS adb ads)
 
