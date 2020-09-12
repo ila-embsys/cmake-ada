@@ -33,17 +33,6 @@ set(CMAKE_ADA_FLAGS_INIT "$ENV{ADAFLAGS} ${CMAKE_ADA_FLAGS_INIT}")
 
 cmake_initialize_per_config_variable(CMAKE_ADA_FLAGS "Flags used by the ADA compiler")
 
-if( NOT CMAKE_NOT_USING_CONFIG_FLAGS )
-    if( NOT CMAKE_NO_BUILD_TYPE )
-        set(CMAKE_ADA_BUILD_TYPE ${CMAKE_BUILD_TYPE_INIT} CACHE STRING "Choose the type of build, options are: None (CMAKE_ADA_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.")
-    endif()
-
-    set(CMAKE_ADA_FLAGS_DEBUG "${CMAKE_ADA_FLAGS_DEBUG_INIT}" CACHE STRING "Flags used by the compiler during debug builds.")
-    set(CMAKE_ADA_FLAGS_MINSIZEREL "${CMAKE_ADA_FLAGS_MINSIZEREL_INIT}" CACHE STRING "Flags used by the compiler during release minsize builds.")
-    set(CMAKE_ADA_FLAGS_RELEASE "${CMAKE_ADA_FLAGS_RELEASE_INIT}" CACHE STRING "Flags used by the compiler during release builds.")
-    set(CMAKE_ADA_FLAGS_RELWITHDEBINFO "${CMAKE_ADA_FLAGS_RELWITHDEBINFO_INIT}" CACHE STRING "Flags used by the compiler during Release with Debug Info builds.")
-endif()
-
 if(CMAKE_ADA_STANDARD_LIBRARIES_INIT)
     set(CMAKE_ADA_STANDARD_LIBRARIES "${CMAKE_ADA_STANDARD_LIBRARIES_INIT}" CACHE STRING "Libraries linked by defalut with all Ada applications.")
     mark_as_advanced(CMAKE_ADA_STANDARD_LIBRARIES)
